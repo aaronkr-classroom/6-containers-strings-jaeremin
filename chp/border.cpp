@@ -1,11 +1,15 @@
 //border.cpp
 
-#include<vector>
-#include<string>
-#include<iostream>
+#include <iostream>
+#include <cctype>
+#include <vector>
+#include <string>
+
+
 #include"split.h"
 
 using namespace std;
+
 string::size_type width(const vector<string>& v)
 {
 	string::size_type maxlen = 0;
@@ -35,8 +39,7 @@ vector<string> frame(const vector<string>& v)
 }
 
 //수직 결합 = vertical concat
-vector<string> vcat(const vector<string>& top,
-	const vector<string>& bottom)
+vector<string> vcat(const vector<string>& top, const vector<string>& bottom)
 { 
 	//위쪽 문자 그림을 복사
 	vector<string> ret = top;
@@ -51,8 +54,7 @@ vector<string> vcat(const vector<string>& top,
 } 
 
 //수평 결합 = horizental
-vector<string> hcat(const vector<string>& left,
-	const vector<string>& right)
+vector<string> hcat(const vector<string>& left,const vector<string>& right)
 {
 	vector<string> ret;
 
@@ -87,7 +89,14 @@ vector<string> hcat(const vector<string>& left,
 	}
 	return ret;
 }
+/*과제
+* 1.split()가져오고 사용하기
+* 2.vcat() 사용하기
+* 3.hcat() 사용하기
+* 4.out.txt 파일에서 모든 출력 저장해 주세요.
+*/
 
+/*
 int main()
 {
 	string s;
@@ -99,3 +108,4 @@ int main()
 	}
 	return 0;
 }
+*/
